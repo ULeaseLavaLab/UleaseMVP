@@ -10,30 +10,13 @@
       <div class="t-button-text">100+ listings near campus</div>
     </div>
 
-    <Property 
-      v-for="(property, i) in properties"
-      :key="i"  
-      :property="property"
-    />
-
-    <v-card 
-      v-for="i in 3" 
-      :key="i" 
-      class="mb-4"
-      @click="showListing"  
-    >
-      <div style="display: flex;">
-        <v-img max-width="250" max-height="200" src="https://www.hollandresidential.com/globalassets/550-harborfront/550-harborfront-exterior.png"></v-img>
-        <div>
-          <v-card-title>
-            Sunshine Apartments
-          </v-card-title>
-          <v-card-text>
-            lmao this is a description
-          </v-card-text>
-        </div>
-      </div>
-    </v-card>
+    <template v-for="(property, i) in properties" >
+      <v-divider v-if="i !== 0" :key="`${i}-divider`" />
+      <Property 
+        :key="i"
+        v-bind="property"
+      />
+    </template>
   </v-container>
 </template>
 
@@ -66,7 +49,67 @@ export default {
           numReviews: 103,
           roomOnly: false,
           sponsored: true,
-        }
+        },
+        {
+          image: require('@/assets/property2.jpg'),
+          title: '1-bed / 1-bath Spacious House on Menlo Avenue',
+          address: '2723 Menlo Avenue, Los Angeles CA 90007',
+          distance: 1.8,
+          tags: ['Balcony/patio', 'Gated', 'Parking', 'Tile floors'],
+          rent: 1200,
+          lister: 'Mosaic Student Communities',
+          listDuration: '2 days',
+          numListings: 236,
+          rating: 4.32,
+          numReviews: 103,
+          roomOnly: false,
+          sponsored: true,
+        },
+        {
+          image: require('@/assets/property3.jpg'),
+          title: 'One bedroom summer sublease on Ellendale Street',
+          address: 'Student-listed sublease on Ellendale street',
+          distance: 0.4,
+          tags: ['Roommate', 'Location', 'Furnished', 'Parking'],
+          rent: 980,
+          lister: 'Jose Holloway',
+          listDuration: '1 hour',
+          numListings: 1,
+          rating: 0,
+          numReviews: 0,
+          roomOnly: true,
+          sponsored: false,
+        },
+        {
+          image: require('@/assets/property4.jpg'),
+          title: '2-bed / 2-bath apartment unit in University Gateway',
+          address: '1373 W 37th Dr, Los Angeles CA 90007',
+          distance: 0.2,
+          tags: ['2 bed 2 bath', 'Free wifi', 'Furnished', 'Kitchen'],
+          rent: 1100,
+          lister: 'TRIPALINK',
+          listDuration: '3 weeks',
+          numListings: 90,
+          rating: 4.0,
+          numReviews: 283,
+          roomOnly: false,
+          sponsored: true,
+        },
+        {
+          image: require('@/assets/property5.jpg'),
+          title: '1-bed / 1-bath Spacious House on Menlo Avenue',
+          address: '2723 Menlo Avenue, Los Angeles CA 90007',
+          distance: 1.8,
+          tags: ['Balcony/patio', 'Gated', 'Parking', 'Tile floors'],
+          rent: 880,
+          lister: 'Mosaic Student Communities',
+          listDuration: '2 days',
+          numListings: 236,
+          rating: 4.32,
+          numReviews: 103,
+          roomOnly: false,
+          sponsored: true,
+        },
       ]
     }
   },
