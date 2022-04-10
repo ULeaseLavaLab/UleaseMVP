@@ -13,6 +13,7 @@
     <template v-for="(property, i) in properties" >
       <v-divider v-if="i !== 0" :key="`${i}-divider`" />
       <Property 
+        @click="showListing"
         :key="i"
         v-bind="property"
       />
@@ -115,8 +116,10 @@ export default {
   },
 
   methods: {
-    showListing() {
-      this.$router.push({ name: 'listing' })
+    showListing(e) {
+      setTimeout(() => {
+        this.$router.push({ name: 'listing' })
+      }, 200)
     }
   }
 }
