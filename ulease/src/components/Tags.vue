@@ -5,6 +5,7 @@
       :key="i"
       rounded
       outlined
+      @click.stop
     >
       <span class="t-button-text">{{ tag }}</span>
     </v-btn>
@@ -15,6 +16,7 @@
       icon
       small
       color="black"
+      @click.stop
     >
       <v-icon>mdi-chevron-right</v-icon>
     </v-btn>

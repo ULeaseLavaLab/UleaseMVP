@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex py-6">
+  <div v-ripple="true" @click="e => $emit('click', e)" class="_container d-flex pa-6">
     <v-img 
       max-width="300" 
       max-height="200" 
@@ -7,16 +7,19 @@
       class="mr-8"
     ></v-img>
     <div class="py-4" style="flex: 1;">
-      <div class="d-flex mb-4" style="justify-content: space-between">
+      <div class="d-flex mb-10" style="justify-content: space-between">
         <div>
           <div class="t-body-large">{{ title }}</div>
           <div class="t-small">{{ address }}  <v-icon>mdi-walk</v-icon>  {{ distance }} miles from campus</div>
         </div>
         <div class="d-flex" style="flex-direction: column; align-items: flex-end;">
-          <v-btn 
+          <v-btn
+            large 
             icon
+            @click.stop="saved = !saved"
           >
-            <v-icon>mdi-bookmark-outline</v-icon>
+            <v-icon v-if="!saved">mdi-bookmark-outline</v-icon>
+            <v-icon v-else>mdi-bookmark</v-icon>
           </v-btn>
           <div class="t-body-large"><span class="t-h3">${{ rent }}</span> / month</div>
         </div>
@@ -41,6 +44,14 @@
 <style scoped>
 .v-image {
   border-radius: 10px;
+}
+
+._container {
+  cursor: pointer;
+}
+
+._container:hover {
+  background-color: #eee;
 }
 </style>
 
@@ -69,5 +80,11 @@ export default {
   components: {
     Tags,
   },
+
+  data() {
+    return {
+      saved: false,
+    }
+  }
 }
 </script>
