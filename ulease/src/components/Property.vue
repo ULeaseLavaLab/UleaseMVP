@@ -10,7 +10,8 @@
       <div class="d-flex mb-10" style="justify-content: space-between">
         <div>
           <div class="t-body-large">{{ title }}</div>
-          <div class="t-small">{{ address }}  <v-icon>mdi-walk</v-icon>  {{ distance }} miles from campus</div>
+          <div class="t-small mb-4">{{ address }}  <v-icon>mdi-walk</v-icon>  {{ distance }} miles from campus</div>
+          <Tags class="mb-2" :tags="tags" />
         </div>
         <div class="d-flex" style="flex-direction: column; align-items: flex-end;">
           <v-btn
@@ -21,16 +22,22 @@
             <v-icon v-if="!saved">mdi-bookmark-outline</v-icon>
             <v-icon v-else>mdi-bookmark</v-icon>
           </v-btn>
+          <span class="t-small"><v-icon>mdi-clock-time-nine-outline</v-icon> {{ listDuration }} ago</span>
           <div class="t-body-large"><span class="t-h3">${{ rent }}</span> / month</div>
         </div>
       </div>
       <div class="d-flex" style="justify-content: space-between">
-        <div>
-          <div><span class="t-body">Listed by</span> <span class="t-link">{{ lister }}</span> <span class="t-small"><v-icon>mdi-clock-time-nine-outline</v-icon> {{ listDuration }} ago</span></div>
-          <div class="t-small">{{ numListings }} listings | <v-icon>mdi-star</v-icon> {{ rating }} ({{ numReviews }} reviews)</div>
+        <div class="d-flex" style="gap: 20px;">
+          <v-avatar color="white" class="shadow">
+            <v-img :src="listerPic">
+            </v-img>
+          </v-avatar>
+          <div>
+            <div><span class="t-body">Listed by</span> <span class="t-link">{{ lister }}</span></div>
+            <div class="d-flex t-small" style="align-items: center;">{{ numListings }} listings | <v-icon class="c-blue-text">mdi-star</v-icon> {{ rating }} ({{ numReviews }} reviews)</div>
+          </div>
         </div>
         <div>
-          <Tags class="mb-2" :tags="tags" nextBtn />
           <div class="t-small" style="text-align: right;">
             <span v-if="roomOnly">This listing is available as a room.</span> 
             <span v-else>This listing is available as a room or full unit.</span>
@@ -69,6 +76,7 @@ export default {
     tags: { type: Array, required: true },
     rent: { type: Number, required: true },
     lister: { type: String, required: true },
+    listerPic: { type: String, required: true },
     listDuration: { type: String, required: true },
     numListings: { type: Number, required: true },
     rating: { type: Number, required: true },

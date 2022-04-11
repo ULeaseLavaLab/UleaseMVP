@@ -14,7 +14,7 @@
         :key="i"
         @click="select(option)"
       >
-        <v-list-item-title>{{ option }}</v-list-item-title>
+        <div class="t-bolded-button-text">{{ option }}</div>
       </v-list-item>
     </v-list>
   </v-menu>

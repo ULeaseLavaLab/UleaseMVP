@@ -6,21 +6,21 @@
         <h2 class="t-h4"> Filter legitimate properties that fit your needs or sublease your place to college students. </h2>
 
         <div class="dropdowns">
-          <v-col cols="12">
-            <v-select
-              :items="items"
-              :menu-props="{ top: true, offsetY: false }"
-              label="CAMPUS"
-            ></v-select>
-          </v-col>
-          <v-col cols="6">
-            <v-select
-              :items="leases"
-              :menu-props="{ top: true, offsetY: false }"
-              label="LEASE TERM"
-            ></v-select>
-          </v-col>
-          <div class="move_right">
+          <v-row>
+            <v-col cols="12">
+              <v-select
+                :items="items"
+                :menu-props="{ top: true, offsetY: false }"
+                label="CAMPUS"
+              ></v-select>
+            </v-col>
+            <v-col cols="6">
+              <v-select
+                :items="leases"
+                :menu-props="{ top: true, offsetY: false }"
+                label="LEASE TERM"
+              ></v-select>
+            </v-col>
             <v-col cols="6">
               <v-select
                 :items="types"
@@ -28,7 +28,7 @@
                 label="LEASE TYPE"
               ></v-select>
             </v-col>
-          </div>
+          </v-row>
           
         </div>
         

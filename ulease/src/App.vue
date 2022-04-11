@@ -25,6 +25,10 @@
 </template>
 
 <style>
+  .shadow {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  }
+
   .t-h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
@@ -102,6 +106,46 @@
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: 400;
+  }
+
+  .c-blue {
+    background-color: #202ADF !important;
+  }
+
+  .c-blue-text {
+    color: #202ADF !important;
+  }
+
+  .c-black {
+    background-color: #222 !important;
+  }
+
+  .c-black-text {
+    background-color: #222 !important;
+  }
+
+  .c-silver {
+    background-color: #717171 !important;
+  }
+
+  .c-silver-text {
+    color: #717171 !important;
+  }
+
+  .c-gainsboro {
+    background-color: #ddd !important;
+  }
+
+  .c-gainsboro-text {
+    color: #ddd !important;
+  }
+
+  .c-platinum {
+    background-color: #ebebeb !important;
+  }
+
+  .c-platinum-text {
+    color: #ebebeb !important;
   }
 </style>
 
