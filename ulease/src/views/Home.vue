@@ -4,36 +4,50 @@
       <div class="left-side">
         <h1 class="t-h1">Secure your place near campus</h1>
         <h2 class="t-h4"> Filter legitimate properties that fit your needs or sublease your place to college students. </h2>
-
+        <br> <br>
         <div class="dropdowns">
           <v-row>
             <v-col cols="12">
               <v-select
                 :items="items"
                 :menu-props="{ top: true, offsetY: false }"
-                label="CAMPUS"
+                label="Campus"
               ></v-select>
             </v-col>
             <v-col cols="6">
               <v-select
                 :items="leases"
                 :menu-props="{ top: true, offsetY: false }"
-                label="LEASE TERM"
+                label="Lease Term"
               ></v-select>
             </v-col>
             <v-col cols="6">
               <v-select
                 :items="types"
                 :menu-props="{ top: true, offsetY: false }"
-                label="LEASE TYPE"
+                label="Lease Type"
               ></v-select>
+            </v-col>
+            <v-col md="6">
+              <v-text-field
+                label="Min Price"
+                prefix="$"
+                required
+              ></v-text-field>
+            </v-col>
+            <v-col md="6">
+              <v-text-field
+                label="Max Price"
+                prefix="$"
+                required
+              ></v-text-field>
             </v-col>
           </v-row>
           
         </div>
         
-        <br>
-        <SearchBar 
+        <br> <br>
+        <HomeSearch 
           @search="search"
         />
       </div>
@@ -79,7 +93,7 @@
 </style>
 
 <script>
-import SearchBar from '@/components/SearchBar'
+import HomeSearch from '@/components/HomeSearch'
 
 export default {
   data: () => ({
@@ -90,7 +104,7 @@ export default {
   name: 'Home',
 
   components: {
-    SearchBar,
+    HomeSearch,
   },
 
   methods: {
