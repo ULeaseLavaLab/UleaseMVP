@@ -2,19 +2,18 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="white"
       dark
     >
-      <div class="d-flex align-center" @click="$router.push({ name: 'landing' })">
+      <div class="d-flex align-center" @click="$router.push({ name: 'home' })">
         <v-img
-          alt="Vuetify Logo"
+          alt="ULease_logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src= 'assets/ULease_logo.PNG'
           transition="scale-transition"
           width="40"
         />
-        <div>ULease</div>
       </div>
     </v-app-bar>
 
