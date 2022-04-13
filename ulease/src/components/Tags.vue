@@ -32,7 +32,7 @@
 }
 
 .v-btn--outlined {
-  border-color: lightgray;
+  border-color: var(--gainsboro);
 }
 </style>
 

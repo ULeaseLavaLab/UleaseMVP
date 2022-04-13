@@ -74,7 +74,19 @@ export default {
 };
 </script>
 
-<style>
+<style >
+  :root {
+    --blue: #202ADF;
+    --black: #222;
+    --silver: #717171;
+    --gainsboro: #ddd;
+    --platinum: #ebebeb;
+  }
+
+  .theme--light.v-application {
+    color: var(--black) !important;
+  }
+
   /* TODO: make font sizes adjust to screen size */
   .shadow {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
@@ -160,43 +172,43 @@ export default {
   }
 
   .c-blue {
-    background-color: #202ADF !important;
+    background-color: var(--blue) !important;
   }
 
   .c-blue-text {
-    color: #202ADF !important;
+    color: var(--blue)  !important;
   }
 
   .c-black {
-    background-color: #222 !important;
+    background-color: var(--black) !important;
   }
 
   .c-black-text {
-    color: #222 !important;
+    color: var(--black) !important;
   }
 
   .c-silver {
-    background-color: #717171 !important;
+    background-color: var(--silver) !important;
   }
 
   .c-silver-text {
-    color: #717171 !important;
+    color: var(--silver) !important;
   }
 
   .c-gainsboro {
-    background-color: #ddd !important;
+    background-color: var(--gainsboro) !important;
   }
 
   .c-gainsboro-text {
-    color: #ddd !important;
+    color: var(--gainsboro) !important;
   }
 
   .c-platinum {
-    background-color: #ebebeb !important;
+    background-color: var(--platinum) !important;
   }
 
   .c-platinum-text {
-    color: #ebebeb !important;
+    color: var(--platinum) !important;
   }
 
   .v-btn {

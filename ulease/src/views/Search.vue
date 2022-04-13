@@ -1,11 +1,11 @@
 <template>
-  <v-container class="pt-8">
+  <v-container class="pt-8" style="max-width: 1185px;">
     <div class="d-flex" style="align-items: center;">
       <h2>Places near USC</h2>
       <div class="mx-4 grey lighten-1" style="width: 2px; height: 24px"></div>
-      <div class="t-body"><a class="t-link" href="">Log in</a> to view 4 hidden properties</div>
+      <div class="t-body c-silver-text"><a class="t-link c-blue-text" href="">Log in</a> to view 4 hidden properties</div>
       <v-spacer />
-      <div class="t-button-text">100+ listings near campus</div>
+      <div class="t-button-text c-silver-text">100+ listings near campus</div>
     </div>
 
     <template v-for="(property, i) in properties" >
