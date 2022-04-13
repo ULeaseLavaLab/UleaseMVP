@@ -2,8 +2,11 @@
   <v-app>
     <v-app-bar
       app
+      style="background-color: white; box-shadow: unset;"
+      :style="navbarStyle"
+      height="90"
     >
-      <div class="d-flex align-center" style="width: 100%;">
+      <div class="d-flex align-center fill-height" style="width: 100%;">
         <v-img
           style="cursor: pointer;"
           @click="$router.push({ name: 'home' })"
@@ -69,7 +72,16 @@ export default {
   computed: {
     showSearchBar() {
       return this.$route.name !== null && this.$route.name !== 'home'
-    }
+    },
+    navbarStyle() {
+      if (this.$route.name === 'home') return {}
+      
+      return {
+        borderBottomColor: 'var(--gainsboro)',
+        borderBottomWidth: '1px',
+        borderBottomStyle: 'solid',
+      }
+    },
   },
 };
 </script>
