@@ -60,6 +60,17 @@
         <HomeSearch 
           @search="search"
         />
+        <br>
+        <div class = "filter_button"> 
+           <v-btn
+            color="#202ADF"
+            icon
+            @click=""
+          >
+          <v-icon>mdi-filter-variant</v-icon>
+          Filters
+           </v-btn>
+        </div>
       </div>
       <div class="right-side">
          <img src="../assets/home.png" width = "600" height = "600" alt=" 1">
@@ -69,6 +80,24 @@
 </template>
 
 <style scoped>
+  .filter_button 
+  {
+    position: relative;
+    text-align: center;
+    
+    top: -60px;
+    left: 420px;
+    color: black;
+    border-color: #DDDDDD;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    border-radius: 10%;
+
+
+  }
   .move_right {
     position: relative;
     left: 260px;
@@ -102,16 +131,18 @@
 <script>
 import HomeSearch from '@/components/HomeSearch'
 
+
 export default {
   data: () => ({
       items: ['University of Southern California (USC)', 'Arizona State University', 'UC San Diego', 'UCLA'],
       leases: ['Summer 2022','Fall 2022', 'Spring 2023', 'Fall 2022 - Summer 2023'],
-      types: ['Single','Double', 'Full Room'],
+      types: ['Lease','Sublease', 'Either'],
     }),
   name: 'Home',
 
   components: {
     HomeSearch,
+    
   },
 
   methods: {

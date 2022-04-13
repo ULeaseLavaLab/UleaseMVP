@@ -40,7 +40,7 @@
   ._container {
     text-align: center;
     color: white;
-    width: 440px;
+    width: 417px;
     border-width: 1px;
     border-radius: 10px;
     border-color: white;
