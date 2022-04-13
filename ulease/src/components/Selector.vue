@@ -2,7 +2,7 @@
   <v-menu offset-y>
     <template v-slot:activator="{ on, attrs }">
       <v-btn 
-        class="t-bolded-button-text"
+        class="t-bolded-button-text c-black-text"
         text
         v-on="on"
         v-bind="attrs"
@@ -14,19 +14,11 @@
         :key="i"
         @click="select(option)"
       >
-        <div class="t-bolded-button-text">{{ option }}</div>
+        <div class="t-bolded-button-text c-black-text">{{ option }}</div>
       </v-list-item>
     </v-list>
   </v-menu>
 </template>
-
-<style scoped>
-  .v-btn {
-    letter-spacing: unset;
-    text-indent: unset;
-    text-transform: unset;
-  }
-</style>
 
 <script>
 export default {

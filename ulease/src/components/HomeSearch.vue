@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex">
     <div class="d-flex _container" style="align-items: center;">
-      <template 
+      <!--<template 
         v-for="(filter, i) in filters"
       >
         <Selector 
@@ -10,7 +10,7 @@
           v-model="filter.selected"
           :options="filter.options"
         />
-      </template>
+      </template>-->
       
       
       <v-btn
@@ -78,7 +78,7 @@ export default {
 
   data() {
     return {
-      Search
+      
     }
   },
 

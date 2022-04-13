@@ -1,10 +1,15 @@
 <template>
-  <div v-ripple="true" @click="e => $emit('click', e)" class="_container d-flex pa-6">
+  <div 
+    v-ripple="true" 
+    @click="e => $emit('click', e)" 
+    class="_container d-flex pa-6"
+    style="align-items: center;"
+  >
     <v-img 
       max-width="300" 
       max-height="200" 
       :src="image"
-      class="mr-8"
+      class="mr-6"
     ></v-img>
     <div class="py-4" style="flex: 1;">
       <div class="d-flex mb-10" style="justify-content: space-between">

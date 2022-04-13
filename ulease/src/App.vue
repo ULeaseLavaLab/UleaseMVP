@@ -2,18 +2,47 @@
   <v-app>
     <v-app-bar
       app
-      color="white"
-      dark
     >
-      <div class="d-flex align-center" @click="$router.push({ name: 'home' })">
+      <div class="d-flex align-center" style="width: 100%;">
         <v-img
+          style="cursor: pointer;"
+          @click="$router.push({ name: 'home' })"
           alt="ULease_logo"
           class="shrink mr-2"
           contain
-          src= 'assets/ULease_logo.PNG'
+          src='@/assets/ULease_logo.png'
           transition="scale-transition"
-          width="40"
+          width="150"
         />
+        <SearchBar v-if="showSearchBar"/>
+        <v-spacer/>
+
+        <v-btn 
+          @click=""
+          text
+          rounded
+          class="t-tabs c-black-text"
+        >
+          <v-icon class="mr-2">mdi-plus-circle-outline</v-icon> List your place
+        </v-btn>
+        <v-btn 
+          @click=""
+          v-if="loggedIn"
+          text
+          rounded
+          class="t-tabs c-black-text"
+        >
+          <v-icon class="mr-2">mdi-email-outline</v-icon> Messages
+        </v-btn>
+        <v-btn 
+          @click=""
+          text
+          outlined
+          rounded
+          class="t-tabs c-black-text"
+        >
+          <v-icon class="mr-2">mdi-account</v-icon> {{ loggedIn ? 'Profile' : 'Log in'}}
+        </v-btn>
       </div>
     </v-app-bar>
 
@@ -23,7 +52,30 @@
   </v-app>
 </template>
 
+<script>
+import SearchBar from '@/components/SearchBar'
+
+export default {
+  name: 'App',
+
+  components: {
+    SearchBar,
+  },
+
+  data: () => ({
+    loggedIn: true,
+  }),
+
+  computed: {
+    showSearchBar() {
+      return this.$route.name !== null && this.$route.name !== 'home'
+    }
+  },
+};
+</script>
+
 <style>
+  /* TODO: make font sizes adjust to screen size */
   .shadow {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   }
@@ -120,7 +172,7 @@
   }
 
   .c-black-text {
-    background-color: #222 !important;
+    color: #222 !important;
   }
 
   .c-silver {
@@ -146,15 +198,10 @@
   .c-platinum-text {
     color: #ebebeb !important;
   }
+
+  .v-btn {
+    letter-spacing: unset;
+    text-indent: unset;
+    text-transform: unset;
+  }
 </style>
-
-<script>
-
-export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  }),
-};
-</script>

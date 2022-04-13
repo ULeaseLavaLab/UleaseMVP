@@ -25,6 +25,7 @@
       <v-btn
         color="primary"
         icon
+        small
         @click="search"
       >
         <v-icon>mdi-magnify</v-icon>

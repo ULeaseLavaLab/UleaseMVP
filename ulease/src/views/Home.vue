@@ -6,40 +6,50 @@
         <h2 class="t-h4"> Filter legitimate properties that fit your needs or sublease your place to college students. </h2>
         <br> <br>
         <div class="dropdowns">
-          <v-row>
-            <v-col cols="12">
+          <v-row no-gutters>
+            <v-col cols="12" class="mb-2">
               <v-select
                 :items="items"
                 :menu-props="{ top: true, offsetY: false }"
                 label="Campus"
+                hide-details
+                outlined
               ></v-select>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="6" class="mb-2 pr-1">
               <v-select
                 :items="leases"
                 :menu-props="{ top: true, offsetY: false }"
                 label="Lease Term"
+                outlined
+                hide-details
               ></v-select>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="6" class="mb-2 pl-1">
               <v-select
                 :items="types"
                 :menu-props="{ top: true, offsetY: false }"
                 label="Lease Type"
+                hide-details
+                outlined
               ></v-select>
             </v-col>
-            <v-col md="6">
+            <v-col md="6" class="mb-2 pr-1">
               <v-text-field
                 label="Min Price"
                 prefix="$"
                 required
+                hide-details
+                outlined
               ></v-text-field>
             </v-col>
-            <v-col md="6">
+            <v-col md="6" class="mb-2 pl-1">
               <v-text-field
                 label="Max Price"
                 prefix="$"
                 required
+                hide-details
+                outlined
               ></v-text-field>
             </v-col>
           </v-row>
@@ -65,9 +75,6 @@
     top: -93px;
   }
   .dropdowns {
-    border: 1px;
-    border-style: solid;
-    border-color: #DDDDDD;
   }
   h2 {
     color: #717171;
