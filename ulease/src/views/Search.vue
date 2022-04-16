@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pt-8" style="max-width: 1185px;">
+  <v-container class="pt-8" style="max-width: 1200px;">
     <div class="d-flex" style="align-items: center;">
       <h2>Places near USC</h2>
       <div class="mx-4 grey lighten-1" style="width: 2px; height: 24px"></div>

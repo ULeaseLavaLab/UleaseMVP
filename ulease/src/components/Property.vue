@@ -15,7 +15,11 @@
       <div class="d-flex mr-2" style="flex: 1; flex-direction:column; justify-content: space-between">
         <div class="d-flex" style="flex: 1; justify-content: space-between">
           <div>
-            <div class="t-body-large">{{ title }}</div>
+            <div class="t-body-large">
+              {{ title }} 
+              <v-chip v-if="sponsored" small class="t-pre-title c-blue white--text" label><v-icon small class="white--text">mdi-lightning-bolt</v-icon>BOOSTED</v-chip>
+              <v-chip v-else small class="t-pre-title" outlined label>STUDENT LISTED</v-chip>
+            </div>
             <div class="t-small mb-4 c-silver-text">{{ address }}  <v-icon>mdi-walk</v-icon>  {{ distance }} miles from campus</div>
             <Tags class="mb-2" :tags="tags" />
           </div>
@@ -67,6 +71,10 @@
 
 ._container:hover {
   background-color: #eee;
+}
+
+.v-chip {
+  padding: 0 6px;
 }
 </style>
 
