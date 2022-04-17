@@ -18,7 +18,7 @@
           width="150"
         />
         <SearchBar v-if="showSearchBar"/>
-        <v-spacer/>
+        <v-spacer />
 
         <v-btn 
           @click=""

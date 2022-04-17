@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex" style="gap: 10px; align-items: center;">
+  <div class="d-flex" style="gap: 10px; align-items: center; flex-wrap: wrap">
     <v-btn 
       v-for="(tag, i) in tags" 
       :key="i"

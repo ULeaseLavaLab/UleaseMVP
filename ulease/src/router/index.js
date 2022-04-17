@@ -16,7 +16,7 @@ const routes = [
     component: () => import('../views/Search.vue')
   },
   {
-    path: '/listing',
+    path: '/listing/:id',
     name: 'listing',
     component: () => import('../views/Listing.vue')
   },

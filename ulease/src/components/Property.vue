@@ -29,16 +29,13 @@
           </div>
         </div>
         <div class="d-flex" style="justify-content: space-between">
-          <div class="d-flex" style="gap: 20px;">
-            <v-avatar color="white" class="shadow">
-              <v-img :src="listerPic">
-              </v-img>
-            </v-avatar>
-            <div>
-              <div><span class="t-body">Listed by</span> <span class="t-link">{{ lister }}</span></div>
-              <div class="d-flex t-small c-silver-text" style="align-items: center;">{{ numListings }} listings | <v-icon class="c-blue-text">mdi-star</v-icon> {{ rating }} ({{ numReviews }} reviews)</div>
-            </div>
-          </div>
+          <Lister
+            :listerPic="listerPic"
+            :lister="lister"
+            :numListings="numListings"
+            :rating="rating"
+            :numReviews="numReviews"
+          />
           <div style="align-self: flex-end;">
             <div class="t-small" style="text-align: right;">
               <span v-if="roomOnly">This listing is available as a room.</span> 
@@ -80,6 +77,7 @@
 
 <script>
 import Tags from '@/components/Tags'
+import Lister from '@/components/Lister'
 
 export default {
   name: 'Property',
@@ -103,6 +101,7 @@ export default {
 
   components: {
     Tags,
+    Lister,
   },
 
   data() {
