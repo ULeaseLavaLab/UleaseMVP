@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container style="max-width: 1200px;">
     <div class="d-flex mb-4" style="height: 400px; gap: 10px;">
       <v-img src="@/assets/listing/1.png" style="flex: 1;"/>
       <div class="d-flex" style="flex-direction: column; gap: 10px; max-width: 400px;">
@@ -28,72 +28,100 @@
         Share
       </v-btn>
     </div>
+    
+    <div class="d-flex">
+      <div style="flex: 1;">
+        <div class="d-flex align-center mb-8">
+          <div class="t-body-large c-silver-text mr-6">{{ property.address }}</div>
+          <div class="t-small c-blue-text"><v-icon class="c-blue-text">mdi-account-supervisor</v-icon> 12 people are viewing this property</div>
+        </div>
 
-    <div style="margin-right: 400px;">
-      <div class="d-flex align-center mb-8">
-        <div class="t-body-large c-silver-text mr-6">{{ property.address }}</div>
-        <div class="t-small c-blue-text"><v-icon class="c-blue-text">mdi-account-supervisor</v-icon> 12 people are viewing this property</div>
+        <Lister
+          class="mb-8"
+          :listerPic="property.listerPic"
+          :lister="property.lister"
+          :numListings="property.numListings"
+          :rating="property.rating"
+          :numReviews="property.numReviews"
+        />
+
+        <div class="t-h4 mb-2">Overview</div>
+        <div class="t-body mb-8">{{ property.description }}</div>
+
+        <table>
+          <tr>
+            <td><v-icon class="c-silver-text">mdi-walk</v-icon></td>
+            <td><div class="t-body c-silver-text mr-12">{{ property.distance }} miles from campus</div></td>
+            <td><v-icon class="c-silver-text">mdi-bed</v-icon></td>
+            <td><div class="t-body c-silver-text mr-12">{{ property.layout }}</div></td>
+          </tr>
+          <tr>
+            <td><v-icon class="c-silver-text">mdi-ruler-square</v-icon></td>
+            <td><div class="t-body c-silver-text mr-12">{{ property.squareFootage }} square feet</div></td>
+            <td><v-icon class="c-silver-text">mdi-domain</v-icon></td>
+            <td><div class="t-body c-silver-text mr-12">{{ property.propertyType }}</div></td>
+          </tr>
+          <tr>
+            <td><v-icon class="c-silver-text">mdi-account</v-icon></td>
+            <td><div class="t-body c-silver-text mr-12">{{ property.maxOccupants }} occupant maximum</div></td>
+            <td><v-icon class="c-silver-text">mdi-clipboard-text</v-icon></td>
+            <td><div class="t-body c-silver-text mr-12">Available for lease</div></td>
+          </tr>
+        </table>
+
+        <v-divider class="my-8" />
+
+        <div class="t-h4 mb-2">Property amenities</div>
+        <Tags class="mb-4" :tags="property.amenities" />
+        <v-btn
+          class="c-blue-text t-button-text"
+          outlined
+        >Show all amenities (23)</v-btn>
+
+        <v-divider class="my-8" />
+
+        <div class="t-h4 mb-2">Hoover Street in Los Angeles, CA</div>
+        <v-img src="@/assets/listing/map.png" width="800" />
+
+        <v-divider class="my-8" />
+
+        <v-tabs v-model="tab">
+          <v-tabs-slider color="var(--blue)"></v-tabs-slider>
+
+          <v-tab>
+            <span class="t-h4">Reviews for this property</span>
+          </v-tab>
+          <v-tab>
+            <span class="t-h4">Questions & Answers</span>
+          </v-tab>
+        </v-tabs>
+
+        <v-tabs-items v-model="tab">
+          <v-tab-item>
+            reviews!
+          </v-tab-item>
+          <v-tab-item>
+            q + a!!!
+          </v-tab-item>
+        </v-tabs-items>
       </div>
+      <div>
+        <v-card rounded class="pa-4 ml-4 mt-4" style="position: sticky; top: 106px;">
+          <div class="d-flex align-center mb-4">
+            <div class="t-h3 mr-1">${{ property.rent }}</div> <div class="t-body-large"> / month</div>
+          </div>
 
-      <Lister
-        class="mb-8"
-        :listerPic="property.listerPic"
-        :lister="property.lister"
-        :numListings="property.numListings"
-        :rating="property.rating"
-        :numReviews="property.numReviews"
-      />
-
-      <div class="t-h4 mb-2">Overview</div>
-      <div class="t-body mb-8">{{ property.description }}</div>
-
-      <table>
-        <tr>
-          <td><v-icon class="c-silver-text">mdi-walk</v-icon></td>
-          <td><div class="t-body c-silver-text mr-12">{{ property.distance }} miles from campus</div></td>
-          <td><v-icon class="c-silver-text">mdi-bed</v-icon></td>
-          <td><div class="t-body c-silver-text mr-12">{{ property.layout }}</div></td>
-        </tr>
-        <tr>
-          <td><v-icon class="c-silver-text">mdi-ruler-square</v-icon></td>
-          <td><div class="t-body c-silver-text mr-12">{{ property.squareFootage }} square feet</div></td>
-          <td><v-icon class="c-silver-text">mdi-domain</v-icon></td>
-          <td><div class="t-body c-silver-text mr-12">{{ property.propertyType }}</div></td>
-        </tr>
-        <tr>
-          <td><v-icon class="c-silver-text">mdi-account</v-icon></td>
-          <td><div class="t-body c-silver-text mr-12">{{ property.maxOccupants }} occupant maximum</div></td>
-          <td><v-icon class="c-silver-text">mdi-clipboard-text</v-icon></td>
-          <td><div class="t-body c-silver-text mr-12">Available for lease</div></td>
-        </tr>
-      </table>
-
-      <v-divider class="my-8" />
-
-      <div class="t-h4 mb-2">Property amenities</div>
-      <Tags class="mb-4" :tags="property.amenities" />
-      <v-btn
-        class="c-blue-text t-button-text"
-        outlined
-      >Show all amenities (23)</v-btn>
-
-      <v-divider class="my-8" />
-
-      <div class="t-h4 mb-2">Hoover Street in Los Angeles, CA</div>
-      <v-img src="@/assets/listing/map.png" />
-
-      <v-divider class="my-8" />
-
-      <v-tabs>
-        <v-tabs-slider color="var(--blue)"></v-tabs-slider>
-
-        <v-tab>
-          <span class="t-h4">Reviews for this property</span>
-        </v-tab>
-        <v-tab>
-          <span class="t-h4">Questions & Answers</span>
-        </v-tab>
-      </v-tabs>
+          <div class="t-h4 c-black-text">Interested in this property?</div>
+          <div class="t-body c-silver-text mb-8">Send a message to show interest and ask questions or view property availability</div>
+          
+          <v-btn color="var(--blue)" class="mb-2" dark block @click="message">
+            <span class="t-button-text">Message lister</span>
+          </v-btn>
+          <v-btn outlined block color="var(--gainsboro)">
+            <span class="t-button-text c-black-text">View property</span>
+          </v-btn>
+        </v-card>
+      </div>
     </div>
 
   </v-container>
@@ -133,6 +161,7 @@ export default {
   data() {
     return {
       saved: false,
+      tab: 0,
     }
   },
 
@@ -144,7 +173,7 @@ export default {
   },
 
   methods: {
-    search() {
+    message() {
       this.$router.push({ name: 'message' })
     },
   },
