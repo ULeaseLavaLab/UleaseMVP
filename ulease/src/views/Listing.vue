@@ -98,7 +98,11 @@
 
         <v-tabs-items v-model="tab">
           <v-tab-item>
-            reviews!
+            <Reviews 
+              :rating="property.rating" 
+              :numReviews="property.numReviews"
+              :reviews="reviews"  
+            />
           </v-tab-item>
           <v-tab-item>
             q + a!!!
@@ -162,6 +166,16 @@ export default {
     return {
       saved: false,
       tab: 0,
+      reviews: [
+        {
+          name: 'Winston Tilton',
+          pic: require('@/assets/reviews/1.png'),
+          date: new Date(),
+          leaseTerm: ['Fall 2021', 'Spring 2022'],
+          text: 'Gateway’s location is what I would say one of the best in terms of being able to walk to campus every day without having to wake up super early or rush to class. I guess one downside is that whenever it’s a weekend night or a Friday night, my neighbors go wild and party too loud but I got a pair of ear plugs so I don’t have to...',
+          helpfulCount: 4,
+        },
+      ],
     }
   },
 
