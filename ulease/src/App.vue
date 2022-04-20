@@ -87,6 +87,7 @@ export default {
 </script>
 
 <style >
+  /* Variables */
   :root {
     --blue: #202ADF;
     --black: #222;
@@ -95,15 +96,31 @@ export default {
     --platinum: #ebebeb;
   }
 
-  .theme--light.v-application {
-    color: var(--black) !important;
-  }
-
-  /* TODO: make font sizes adjust to screen size */
+  /* Custom Classes */
   .shadow {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
   }
 
+  .dot {
+    width: 3px;
+    height: 3px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: var(--black);
+  }
+
+  /* Vuetify overrides */
+  .v-btn {
+    letter-spacing: unset;
+    text-indent: unset;
+    text-transform: unset;
+  }
+
+  .theme--light.v-application {
+    color: var(--black) !important;
+  }
+
+  /* Fonts */
   .t-h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px !important;
@@ -183,6 +200,7 @@ export default {
     font-weight: 400 !important;
   }
 
+  /* Colors */
   .c-blue {
     background-color: var(--blue) !important;
   }
@@ -221,11 +239,5 @@ export default {
 
   .c-platinum-text {
     color: var(--platinum) !important;
-  }
-
-  .v-btn {
-    letter-spacing: unset;
-    text-indent: unset;
-    text-transform: unset;
   }
 </style>

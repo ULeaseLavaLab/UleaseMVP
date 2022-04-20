@@ -148,6 +148,66 @@ export default new Vuex.Store({
         helpfulCount: 3,
       },
     ],
+    questions: [
+      {
+        question: {
+          name: 'Brianna Fernandez',
+          pic: require('@/assets/qna/1.png'),
+          date: new Date(),
+          text: 'How long does it take to walk to SCA from Gateway? My classes are on the farther side of campus away from Gateway so I’m a little worried about having to wake up early to walk to class ',
+        },
+        answers: [
+          {
+            name: 'Andy Wang',
+            pic: require('@/assets/qna/2.png'),
+            date: new Date(),
+            text: 'It took me like 15 minutes to walk to the front building of SCA and maybe took like 5-8 minutes to skateboard there but I recommend walking over and timing yourself since it might be different for you',
+            helpfulCount: 1,
+          }
+        ],
+      },
+      {
+        question: {
+          name: 'Noah Riley',
+          pic: require('@/assets/qna/3.png'),
+          date: new Date(),
+          text: 'Are the bedrooms in the 2 bed 2 bath units big enough for me to bring my own TV? It’s about 60 inches wide and I want to put it across my bed',
+        },
+        answers: [
+          {
+            name: 'Esmeralda Sam',
+            pic: require('@/assets/qna/4.png'),
+            date: new Date(),
+            text: 'Yes, I’d say that it would fit but it might take up some space and I would also make sure that you’re roommate is cool with it too',
+            helpfulCount: 3,
+          }
+        ],
+      },
+      {
+        question: {
+          name: 'Leslie Smith',
+          pic: require('@/assets/qna/5.png'),
+          date: new Date(),
+          text: 'How loud does it get in Gateway because I heard that a lot of my friends who lived there had a lot of complaints about the noise',
+        },
+        answers: [
+          {
+            name: 'Eugene Schauer',
+            pic: require('@/assets/qna/6.png'),
+            date: new Date(),
+            text: 'There’s parties and stuff on the weekends so be prepared with earplugs LOL',
+            helpfulCount: 12,
+          },
+          {
+            name: 'Sunhee Song',
+            pic: require('@/assets/qna/7.png'),
+            date: new Date(),
+            text: 'Yea there’s parties and stuff but also the fire alarms get triggered sometimes for no reason which is more annoying for me',
+            helpfulCount: 8,
+          }
+        ],
+      },
+    ],
   },
   getters: {
   },

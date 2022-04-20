@@ -105,7 +105,9 @@
             />
           </v-tab-item>
           <v-tab-item>
-            q + a!!!
+            <QnAs 
+              :questions="questions"
+            />
           </v-tab-item>
         </v-tabs-items>
       </div>
@@ -150,6 +152,7 @@ import SearchBar from '@/components/SearchBar'
 import Lister from '@/components/Lister'
 import Tags from '@/components/Tags'
 import Reviews from '@/components/Reviews'
+import QnAs from '@/components/QnAs'
 import { mapState } from 'vuex'
 
 export default {
@@ -159,7 +162,8 @@ export default {
     SearchBar,  
     Lister,
     Tags,
-    Reviews
+    Reviews,
+    QnAs,
   },
 
   data() {
@@ -170,7 +174,7 @@ export default {
   },
 
   computed: {
-    ...mapState([ 'properties', 'reviews' ]),
+    ...mapState([ 'properties', 'reviews', 'questions' ]),
     property() {
       return this.properties[this.$route.params.id]
     },

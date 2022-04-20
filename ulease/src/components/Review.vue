@@ -33,16 +33,6 @@
   </div>
 </template>
 
-<style scoped>
-.dot {
-  width: 3px;
-  height: 3px;
-  margin: 0 6px;
-  border-radius: 50%;
-  background-color: var(--black);
-}
-</style>
-
 <script>
 export default {
   name: 'Review',
