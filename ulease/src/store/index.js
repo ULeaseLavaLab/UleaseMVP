@@ -121,7 +121,33 @@ export default new Vuex.Store({
         squareFootage: 985,
         amenities: ['Free wifi', 'Furnished', 'Kitchen', 'Study rooms', '24-hour fitness center', 'One package lockers', 'Outdoor amphitheater', 'Parking garage', 'Courtyard', 'TV', 'Gated community', '24-hour coffee bar'],
       },
-    }
+    },
+    reviews: [
+      {
+        name: 'Winston Tilton',
+        pic: require('@/assets/reviews/1.png'),
+        date: new Date(),
+        leaseTerm: ['Fall 2021', 'Spring 2022'],
+        text: 'Gateway’s location is what I would say one of the best in terms of being able to walk to campus every day without having to wake up super early or rush to class. I guess one downside is that whenever it’s a weekend night or a Friday night, my neighbors go wild and party too loud but I got a pair of ear plugs so I don’t have to...',
+        helpfulCount: 4,
+      },
+      {
+        name: 'Leah Nguyen',
+        pic: require('@/assets/reviews/2.png'),
+        date: new Date(),
+        leaseTerm: ['Fall 2021', 'Spring 2022'],
+        text: 'I like that Gateway comes furnished because I can save on furniture expenses and moving everything in. The T.V. in the living room is a plus but I don’t really use it LOL but I use the kitchen a lot to cook. The bedrooms are nicely sized so that my friends can sleep over sometimes but just don’t keep your expectation too high if you...',
+        helpfulCount: 6,
+      },
+      {
+        name: 'Ted Parker',
+        pic: require('@/assets/reviews/3.png'),
+        date: new Date(),
+        leaseTerm: ['Fall 2021', 'Spring 2022'],
+        text: 'I go to the fitness center every week and it’s convenient that it’s open 24-hours so it’s never really busy. I think Gateway’s amenities are pretty good and I go out to the courtyard to do any assignments and to get fresh air whenever I get bored inside my room so if you share the same study style, then I recommend using the faciliti...',
+        helpfulCount: 3,
+      },
+    ],
   },
   getters: {
   },

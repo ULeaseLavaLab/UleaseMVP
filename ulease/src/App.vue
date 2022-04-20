@@ -106,81 +106,81 @@ export default {
 
   .t-h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 48px !important;
+    font-weight: 700 !important;
   }
 
   .t-h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 32px !important;
+    font-weight: 600 !important;
   }
 
   .t-h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 26px !important;
+    font-weight: 500 !important;
   }
 
   .t-h4 {
     font-family: 'Inter', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
+    font-size: 22px !important;
+    font-weight: 400 !important;
   }
 
   .t-body {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 16px !important;
+    font-weight: 400 !important;
   }
 
   .t-small {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 14px !important;
+    font-weight: 400 !important;
   }
 
   .t-pre-title {
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 12px !important;
+    font-weight: 700 !important;
   }
 
   .t-button-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 16px !important;
+    font-weight: 400 !important;
   }
 
   .t-link {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 16px !important;
+    font-weight: 500 !important;
     text-decoration: underline;
   }
 
   .t-tabs {
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 14px !important;
+    font-weight: 500 !important;
   }
 
   .t-bolded-button-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 16px !important;
+    font-weight: 500 !important;
   }
 
   .t-body-large {
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 18px !important;
+    font-weight: 400 !important;
   }
 
   .t-body-large2 {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 18px !important;
+    font-weight: 400 !important;
   }
 
   .c-blue {

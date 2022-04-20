@@ -17,11 +17,16 @@
       >Write a review</v-btn>
     </div>
 
-    <Review
-      v-for="review, i in reviews"
-      :key="i"
-      v-bind="review"
-    />
+    <template v-for="review, i in reviews">
+      <v-divider 
+        v-if="i !== 0"
+        :key="`divider-${i}`"
+      />
+      <Review
+        :key="i"
+        v-bind="review"
+      />
+    </template>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <v-container class="pt-8" style="max-width: 1200px;">
-    <div class="d-flex" style="align-items: center;">
+    <div class="d-flex align-center">
       <h2>Places near USC</h2>
       <div class="mx-4 grey lighten-1" style="width: 2px; height: 24px"></div>
       <div class="t-body c-silver-text"><a class="t-link c-blue-text" href="">Log in</a> to view 4 hidden properties</div>
