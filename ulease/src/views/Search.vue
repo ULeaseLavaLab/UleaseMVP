@@ -11,13 +11,15 @@
     </div>
 
     <template v-for="(propertyId, i) in Object.keys(properties)" >
-      <div v-if="properties[propertyId].sponsored || loggedIn" :key="i">
-        <v-divider v-if="i !== 0" />
-        <Property 
-          @click="showListing(propertyId)"
-          v-bind="properties[propertyId]"
-        />
-      </div>
+      <v-expand-transition :key="i">
+        <div v-if="properties[propertyId].sponsored || loggedIn">
+          <v-divider v-if="i !== 0" />
+          <Property 
+            @click="showListing(propertyId)"
+            v-bind="properties[propertyId]"
+          />
+        </div>
+      </v-expand-transition>
     </template>
   </v-container>
 </template>
@@ -38,8 +40,6 @@ export default {
   mounted() {
     //google.accounts.id.disableAutoSelect();
     this.setLoggedIn(false)
-    if (!this.loggedIn)
-      google.accounts.id.prompt()
   },
 
   watch: {
@@ -70,6 +70,8 @@ export default {
     },
     showOverlay() {
       this.overlay = true
+
+      if (!this.loggedIn) google.accounts.id.prompt()
     },
   },
 

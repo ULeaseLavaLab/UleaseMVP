@@ -10,6 +10,7 @@
           v-if="filter.type === 'select'"
           v-model="filter.selected"
           :options="filter.options"
+          bold
         />
         <RangeSelector
           :key="i"

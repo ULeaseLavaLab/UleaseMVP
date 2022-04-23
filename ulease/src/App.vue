@@ -4,48 +4,54 @@
       app
       style="background-color: white; box-shadow: unset;"
       :style="navbarStyle"
-      height="90"
+      :height="appBarHeight"
     >
-      <div class="d-flex align-center fill-height" style="width: 100%;">
-        <v-img
-          style="cursor: pointer;"
-          @click="$router.push({ name: 'home' })"
-          alt="ULease_logo"
-          class="shrink mr-2"
-          contain
-          src='@/assets/ULease_logo.png'
-          transition="scale-transition"
-          width="150"
-        />
-        <SearchBar v-if="showSearchBar"/>
-        <v-spacer />
+      <div style="width: 100%">
+        <div class="d-flex align-center fill-height" style="width: 100%;">
+          <v-img
+            style="cursor: pointer;"
+            @click="$router.push({ name: 'home' })"
+            alt="ULease_logo"
+            class="shrink mr-2"
+            contain
+            src='@/assets/ULease_logo.png'
+            transition="scale-transition"
+            width="150"
+          />
+          <SearchBar v-if="showSearchBar"/>
+          <v-spacer />
 
-        <v-btn 
-          @click=""
-          text
-          rounded
-          class="t-tabs c-black-text"
-        >
-          <v-icon class="mr-2">mdi-plus-circle-outline</v-icon> List your place
-        </v-btn>
-        <v-btn 
-          @click=""
-          v-if="loggedIn"
-          text
-          rounded
-          class="t-tabs c-black-text"
-        >
-          <v-icon class="mr-2">mdi-email-outline</v-icon> Messages
-        </v-btn>
-        <v-btn 
-          @click=""
-          text
-          outlined
-          rounded
-          class="t-tabs c-black-text"
-        >
-          <v-icon class="mr-2">mdi-account</v-icon> {{ loggedIn ? 'Profile' : 'Log in'}}
-        </v-btn>
+          <v-btn 
+            @click=""
+            text
+            rounded
+            class="t-tabs c-black-text"
+          >
+            <v-icon class="mr-2">mdi-plus-circle-outline</v-icon> List your place
+          </v-btn>
+          <v-btn 
+            @click=""
+            v-if="loggedIn"
+            text
+            rounded
+            class="t-tabs c-black-text"
+          >
+            <v-icon class="mr-2">mdi-email-outline</v-icon> Messages
+          </v-btn>
+          <v-btn 
+            @click=""
+            text
+            outlined
+            rounded
+            class="t-tabs c-black-text"
+          >
+            <v-icon class="mr-2">mdi-account</v-icon> {{ loggedIn ? 'Profile' : 'Log in'}}
+          </v-btn>
+        </div>
+
+        <div v-if="showFilters" class="mt-4 d-flex justify-center">
+          <Filters />
+        </div>
       </div>
     </v-app-bar>
 
@@ -57,12 +63,14 @@
 
 <script>
 import SearchBar from '@/components/SearchBar'
+import Filters from '@/components/Filters'
 
 export default {
   name: 'App',
 
   components: {
     SearchBar,
+    Filters,
   },
 
   data: () => ({
@@ -70,8 +78,14 @@ export default {
   }),
 
   computed: {
+    appBarHeight() {
+      return this.showFilters ? 150 : 90
+    },
     showSearchBar() {
       return this.$route.name !== null && this.$route.name !== 'home'
+    },
+    showFilters() {
+      return this.$route.name !== null && this.$route.name === 'search'
     },
     navbarStyle() {
       if (this.$route.name === 'home') return {}
@@ -120,6 +134,8 @@ export default {
     letter-spacing: unset;
     text-indent: unset;
     text-transform: unset;
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
   }
 
   .theme--light.v-application {
