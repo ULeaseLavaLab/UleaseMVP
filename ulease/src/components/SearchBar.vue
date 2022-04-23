@@ -42,19 +42,6 @@
     border-color: lightgray;
     border-style: solid;
   }
-
-  ._divider {
-    width: 1px;
-    background-color: lightgray;
-    height: 100%;
-  }
-
-  .bar {
-    text-align: center;
-    color: white;
-    flex: 1;
-    background-color: #202ADF;
-  }
 </style>
 
 <script>

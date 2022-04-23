@@ -24,6 +24,7 @@
       />
       <Review
         :key="i"
+        class="my-6"
         v-bind="review"
       />
     </template>

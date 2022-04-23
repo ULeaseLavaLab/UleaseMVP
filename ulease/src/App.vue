@@ -109,6 +109,12 @@ export default {
     background-color: var(--black);
   }
 
+  ._divider {
+    width: 1px;
+    background-color: lightgray;
+    align-self: stretch;
+  }
+
   /* Vuetify overrides */
   .v-btn {
     letter-spacing: unset;

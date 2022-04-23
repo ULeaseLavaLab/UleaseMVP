@@ -112,7 +112,7 @@
         </v-tabs-items>
       </div>
       <div>
-        <v-card rounded class="pa-4 ml-4 mt-4" style="position: sticky; top: 106px;">
+        <v-card rounded class="pa-4 ml-6 mt-6 rounded-lg" style="position: sticky; top: 114px; max-width: 350px;">
           <div class="d-flex align-center mb-4">
             <div class="t-h3 mr-1">${{ property.rent }}</div> <div class="t-body-large"> / month</div>
           </div>
@@ -120,10 +120,10 @@
           <div class="t-h4 c-black-text">Interested in this property?</div>
           <div class="t-body c-silver-text mb-8">Send a message to show interest and ask questions or view property availability</div>
           
-          <v-btn color="var(--blue)" class="mb-2" dark block @click="message">
-            <span class="t-button-text">Message lister</span>
+          <v-btn color="var(--blue)" class="mb-2 rounded-lg" dark block @click="message">
+            <div class="t-button-text">Message lister</div>
           </v-btn>
-          <v-btn outlined block color="var(--gainsboro)">
+          <v-btn outlined block color="var(--gainsboro)" class="rounded-lg">
             <span class="t-button-text c-black-text">View property</span>
           </v-btn>
         </v-card>
