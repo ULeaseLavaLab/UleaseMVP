@@ -36,7 +36,7 @@ export default {
   },
 
   mounted() {
-    google.accounts.id.disableAutoSelect();
+    //google.accounts.id.disableAutoSelect();
     this.setLoggedIn(false)
     if (!this.loggedIn)
       google.accounts.id.prompt()
@@ -71,6 +71,11 @@ export default {
     showOverlay() {
       this.overlay = true
     },
-  }
+  },
+
+  beforeRouteLeave(to, from, next) {
+    google.accounts.id.cancel()
+    next()
+  },
 }
 </script>

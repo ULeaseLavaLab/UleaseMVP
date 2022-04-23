@@ -3,9 +3,8 @@
     <div class="page">
       <div class="left-side">
         <h1 class="t-h1">Secure your place near campus</h1>
-        <h2 class="t-h4"> Filter legitimate properties that fit your needs or sublease your place to college students. </h2>
-        <br> <br>
-        <div class="dropdowns">
+        <h2 class="t-h4 mb-8"> Filter legitimate properties that fit your needs or sublease your place to college students. </h2>
+        <div class="dropdowns mb-4">
           <v-row no-gutters>
             <v-col cols="12" class="mb-2">
               <v-select
@@ -56,20 +55,27 @@
           
         </div>
         
-        <br> <br>
-        <HomeSearch 
-          @search="search"
-        />
-        <br>
-        <div class = "filter_button"> 
-           <v-btn
-            color="#202ADF"
-            icon
-            @click=""
+        <div class="d-flex">
+          <v-btn
+            class="t-button-text mr-1"
+            style="flex: 1;"
+            color="var(--blue)"
+            @click="search"
+            dark
           >
-          <v-icon>mdi-filter-variant</v-icon>
-          Filters
-           </v-btn>
+            <v-icon class="mr-1">mdi-magnify</v-icon>
+            Search
+          </v-btn>
+          
+          <v-btn
+            outlined
+            color="var(--gainsboro)"
+          >
+            <span class="c-black-text t-button-text">
+              <v-icon>mdi-tune-variant</v-icon>
+              Filters
+            </span>
+          </v-btn>
         </div>
       </div>
       <div class="right-side">
@@ -129,9 +135,6 @@
 </style>
 
 <script>
-import HomeSearch from '@/components/HomeSearch'
-
-
 export default {
   data: () => ({
       items: ['University of Southern California (USC)', 'Arizona State University', 'UC San Diego', 'UCLA'],
@@ -139,11 +142,6 @@ export default {
       types: ['Lease','Sublease', 'Either'],
     }),
   name: 'Home',
-
-  components: {
-    HomeSearch,
-    
-  },
 
   methods: {
     search() {

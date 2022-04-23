@@ -1,7 +1,7 @@
 <template>
   <v-container style="max-width: 1200px;">
     <div class="d-flex mb-4" style="height: 400px; gap: 10px;">
-      <v-img src="@/assets/listing/1.png" style="flex: 1;"/>
+      <v-img :src="property.image" style="flex: 1;"/>
       <div class="d-flex" style="flex-direction: column; gap: 10px; max-width: 400px;">
         <v-img src="@/assets/listing/2.png" style="flex: 1;"/>
         <v-img src="@/assets/listing/3.png" style="flex: 1;"/>
@@ -164,6 +164,10 @@ export default {
     Tags,
     Reviews,
     QnAs,
+  },
+
+  mounted() {
+    window.scroll(0, 0)
   },
 
   data() {

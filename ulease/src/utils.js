@@ -6,6 +6,5 @@ export const getDateString = (date) => {
 }
 
 export const handleCredentialResponse = (res) => {
-  console.log(res)
   store.commit('setLoggedIn', true)
 }
