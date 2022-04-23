@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    loggedIn: false,
+
     properties: {
       '21468602-daf2-4570-be5b-8f90ac60cc9c': {
         image: require('@/assets/property1.jpg'),
@@ -212,6 +214,9 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
+    setLoggedIn(state, val) {
+      state.loggedIn = val
+    }
   },
   actions: {
   },
