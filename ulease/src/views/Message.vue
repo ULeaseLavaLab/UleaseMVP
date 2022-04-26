@@ -41,7 +41,7 @@
                  <div class = "name-tag-f"> 
                    University Gateway 
                 </div>
-                <a> Okay, thank you! I will let you know any further questions. </a>
+                <a> Okay, thank you! I will let you know any further questions about the contract. </a>
                 <div class = "first-button"> 
                     Just now
                     <v-btn
@@ -198,18 +198,31 @@
                 <div class = "ts"> Housing Company  </div>
                 <div class = "tr"> Usually Responds in a Few Hours  </div>
             </div>
-            <div class="right-message">
-            </div>
-            <br> <br> <br>
-            <div class="left-message"> 
-            </div>
-            <div class="left-message"> 
-            </div>
-            <div class="left-message"> 
-            </div>
-            <br> <br> <br>
-            <div class="right-message">
-            </div>
+
+            <div class="box">
+                <div class="left-center">
+                    <div class="dialog-1">
+                        <div class="left-point"></div>
+                        Hello, thank you for your interest! Please take a look at the leasing document below.
+                    </div>
+                    <div class="dialog-3">
+                        <div class="left-point"></div>
+                        <div class="bolded">DocuSign</div>
+                        <div class = "undertext"> app.docusign.com </div>
+                         <img src = "../assets/docusign.png" width = "42" height="42" alt = "gateway" class="docimg">
+                    </div>
+                <div class="right-center">
+                    <div class="dialog-2">
+                        <div class="right-point"></div>
+                        I am interested in the 2 bed 2 bath unit for an annual lease starting Fall 2022!
+                    </div>
+                    <div class="dialog-4">
+                        <div class="right-point"></div>
+                        Okay, thank you! I will let you know any further questions about the contract.
+                    </div>
+                </div>
+                </div>
+	        </div>  
 
             <div class="messaging-side">
                 <v-col sm="12" md = "12" cols = "12" class="text-box">
@@ -303,30 +316,6 @@
     img {
         border-radius: 50%;
     }
-    .left-message {
-        text-align: center;
-        margin: 10px 50px;
-        border-radius: 95%;
-        width: 200px;
-        height: 60px;
-        background: #ebebeb;
-        border-style: solid;
-        border-color: #DDDDDD;
-        color: blue;
-        font-size: 10px; 
-        
-    }
-    .right-message {
-        text-align: center;
-        margin: 10px 10px 10px 0px;
-        border-radius: 95%;
-        width: 200px;
-        height: 60px;
-        background: blue;
-        color: white;
-        float: right;
-        font-size: 10px;
-    }
     .right-side {
         margin: 10px 10px 0px 0px;
         top: 90px;
@@ -406,7 +395,7 @@
         left: -170px;
     }
     a {
-        left: -50px;
+        left: 12px;
         top: -47px;
         position: relative;
         color: white;
@@ -464,7 +453,7 @@
     .messaging-side
     {
         width: 638px;
-        height: 179px;
+        height: 199px;
         border: solid;
         position: relative;
         top: 144px;
@@ -478,11 +467,13 @@
         border-color: #ebebeb;
         width: 600px;
         height: 21px; 
-        top: -60px;
+        top: 10px;
+        border-width: 0.1px;
+        border-color: #202ADF;
     }
         .add-ons
     {
-        top:-30px;
+        top:35px;
         left: 4px;
     }
     .send {
@@ -490,7 +481,7 @@
         height: 34px;
         float: right;
         right: 22px;
-        top: -10px;
+        top: 50px;
         color: #ebebee; 
     }
     /deep/ .v-btn
@@ -499,9 +490,125 @@
         font-size: 14px;
         font-weight: 200;
     }
-    $rounded: (
-        null: $border-radius-root / 3
-    );
+
+    .box{
+	width: 580px;
+	height: 340px;
+	/* border: solid black; */
+	margin: auto;
+	position: relative;
+	display:block;
+    }
+
+    .left-center{
+    	margin: 40px 0px 50px 20px;
+        float:left;
+    }
+
+    .right-center{
+        margin: 0px 20px 50px 0px;
+        float: right;
+    }
+
+    .dialog-1{
+  	height: 20%;
+  	width: 40%;
+  	background-color: #EBEBEB;
+  	position: absolute;
+  	border-radius: 10%;
+    left: 0;
+    color: #222;
+    margin-top: 120px;
+    margin-left: 20px;
+    
+    }
+
+    .left-point{
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 2px solid transparent;
+	border-top: 40px solid #EBEBEB;
+	position: relative;
+	top: 45%;
+	left: -10%;
+	transform: rotate(60deg);
+    float: left;
+    }
+
+    .dialog-2{
+  	height: 20%;
+  	width: 40%;
+  	background-color: #202ADF;
+  	position: absolute;
+  	border-radius: 10%;
+  	right: 0;
+    }
+    .dialog-4{
+  	height: 20%;
+  	width: 40%;
+  	background-color: #202ADF;
+  	position: absolute;
+  	border-radius: 10%;
+  	right: 0;
+    margin-top: 295px;
+    
+    }
+    .dialog-3
+    {
+    height: 20%;
+  	width: 40%;
+  	background-color: #EBEBEB;
+  	position: absolute;
+  	border-radius: 10%;
+    left: 0;
+    color: #222;
+    margin-top: 195px;
+    margin-left: 20px; 
+    text-align: left;
+    }
+
+    .right-point{
+	width: 0;
+	height: 0;
+	border-left: 2px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 40px solid #202ADF;
+	position: relative;
+	top: 45%;
+	right: -10%;
+	transform: rotate(-60deg);
+    float: right;
+    }
+
+    .box 
+    {
+    color: #ebebeb; 
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    }
+    .bolded {
+        font-weight: bold;
+        font-size: 20px;
+        position: absolute;
+        left: 10px;
+    }
+    .undertext
+    {
+        font-weight: italic;
+        color: #717171;
+        left: 10px;
+        top: 40px;
+        position: absolute;
+    }
+    .docimg {
+        left: 180px;
+        top: 13px;
+        border-radius: 0%;
+        position: absolute;
+        
+    }
 </style>
 
 <script>
