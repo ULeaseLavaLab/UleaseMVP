@@ -4,7 +4,8 @@
       v-for="filter, i in filters"
       :key="i"
       btn-class="mr-2"
-      :value="filter"
+      :value="filter.value"
+      :options="filter.options"
       outlined
       dropdown-icon
     />
@@ -26,7 +27,32 @@ export default {
 
   data() {
     return {
-      filters: ['Roommates', 'Proximity to campus', 'Building type', 'Beds & Baths', 'Amenities', 'Housing company'],
+      filters: [
+        {
+          value: 'Roommates',
+          options: ['1', '2', '3', '4'],
+        }, 
+        {
+          value: 'Proximity to campus',
+          options: ['<1 miles', '2 miles', '5+ miles'],
+        },
+        {
+          value: 'Building type',
+          options: ['Apartment', 'House'],
+        },
+        {
+          value: 'Beds & Baths',
+          options: ['1B1B', '2B2B', '3B2B'],
+        },
+        {
+          value: 'Amenities',
+          options: ['Gym', 'Pool', 'Courtyard'],
+        },
+        {
+          value: 'Housing company',
+          options: ['Gateway', 'Stuho', 'Tripalink', 'Mosaic'],
+        },
+      ],
     }
   },
 }
