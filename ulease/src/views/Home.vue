@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-center align-center pa-8" style="column-gap: 100px; height: 80%;">
+  <div class="d-flex justify-center align-center pa-8" style="column-gap: 50px; height: 80%;">
     <div style="flex: 0 0 500px;">
       <div class="t-h1 c-black-text mb-4">Secure your place near campus</div>
       <div class="t-h4-inter mb-8 c-silver-text"> Filter legitimate properties that fit your needs or sublease your place to college students. </div>
@@ -57,7 +57,7 @@
       <div class="d-flex">
         <v-btn
           color="primary"
-          class="t-button-text mr-1"
+          class="t-button-text mr-2"
           style="flex: 1; align-self: stretch; height: unset;"
           @click="search"
           dark
@@ -80,8 +80,8 @@
     </div>
 
 
-    <div style="width: 50%;">
-      <v-img src="../assets/home.png" class="rounded-lg" max-height="600px"/>
+    <div style="width: 50%; overflow:hidden; height: 100%;" class="d-flex align-center justify-center">
+      <img src="../assets/home.png" class="rounded-lg" style="max-height: 100%; max-width: 100%;"/>
     </div>
   </div>
 </template>

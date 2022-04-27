@@ -6,9 +6,9 @@
       rounded
       outlined
       @click.stop
-      class="py-5"
+      style="padding: 17px unset"
     >
-      <div class="t-button-text">{{ tag }}</div>
+      <div class="t-button-text" style="font-size: 14px !important;">{{ tag }}</div>
     </v-btn>
     <v-btn
       v-if="nextBtn"
