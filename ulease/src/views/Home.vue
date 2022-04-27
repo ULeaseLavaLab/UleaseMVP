@@ -56,9 +56,9 @@
       
       <div class="d-flex">
         <v-btn
+          color="primary"
           class="t-button-text mr-1"
           style="flex: 1; align-self: stretch; height: unset;"
-          color="var(--blue)"
           @click="search"
           dark
         >

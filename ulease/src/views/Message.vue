@@ -299,6 +299,7 @@
 <style scoped>
     .msg-bubble {
         width: 270px;
+        font-size: 14px !important;
     }
     .docusign {
         font-family: 'Inter', sans-serif;

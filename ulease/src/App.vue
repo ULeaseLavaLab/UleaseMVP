@@ -33,6 +33,7 @@
             text
             rounded
             class="t-tabs c-black-text"
+            @click="$router.push({ name: 'message' })"
           >
             <v-icon class="mr-2">mdi-email-outline</v-icon> Messages
           </v-btn>
@@ -132,6 +133,10 @@ export default {
   }
 
   /* Vuetify overrides */
+  .v-application {
+    font-family: 'Inter', sans-serif !important;
+  }
+
   .v-btn {
     letter-spacing: unset;
     text-indent: unset;
