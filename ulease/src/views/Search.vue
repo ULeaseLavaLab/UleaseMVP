@@ -3,8 +3,8 @@
     <v-overlay :value="overlay" />
 
     <div class="d-flex align-center">
-      <h2>Places near USC</h2>
-      <div v-if="!loggedIn" class="mx-4 grey lighten-1" style="width: 2px; height: 24px"></div>
+      <div class="t-h2">Places near USC</div>
+      <div v-if="!loggedIn" class="mx-4 c-gainsboro" style="width: 1px; height: 24px"></div>
       <div v-if="!loggedIn" class="t-body c-silver-text"><a class="t-link c-blue-text" @click="showOverlay">Log in</a> to view 4 hidden properties</div>
       <v-spacer />
       <div class="t-button-text c-silver-text">100+ listings near campus</div>

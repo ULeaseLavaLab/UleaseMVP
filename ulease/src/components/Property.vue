@@ -2,14 +2,14 @@
   <div 
     v-ripple="true" 
     @click="e => $emit('click', e)" 
-    class="_container d-flex pa-6"
+    class="_container d-flex py-10"
     style="align-items: stretch;"
   >
     <v-img 
       max-width="300" 
       max-height="200" 
       :src="image"
-      class="mr-6"
+      class="mr-10"
     ></v-img>
     <div class="d-flex" style="flex: 1;">
       <div class="d-flex mr-2" style="flex: 1; flex-direction:column; justify-content: space-between">
@@ -17,14 +17,14 @@
           <div>
             <div class="t-body-large">
               {{ title }} 
-              <v-chip v-if="sponsored" small class="t-pre-title c-blue white--text" label><v-icon small class="white--text">mdi-lightning-bolt</v-icon>BOOSTED</v-chip>
+              <v-chip v-if="sponsored" small class="t-pre-title c-blue white--text" label><v-icon small class="ml-n1 white--text">mdi-lightning-bolt</v-icon>BOOSTED</v-chip>
               <v-chip v-else small class="t-pre-title" outlined label>STUDENT LISTED</v-chip>
             </div>
-            <div class="t-small mb-4 c-silver-text">{{ address }}  <v-icon>mdi-walk</v-icon>  {{ distance }} miles from campus</div>
+            <div class="t-small mb-4 c-silver-text d-flex align-center">{{ address }}  <div class="c-silver dot" /><v-icon class="t-small ml-n1">mdi-walk</v-icon>  {{ distance }} miles from campus</div>
             <Tags class="mb-2" :tags="tags" />
           </div>
           <div class="d-flex" style="flex-direction: column; align-items: flex-end;">
-            <div class="t-small c-silver-text"><v-icon>mdi-clock-time-nine-outline</v-icon> {{ listDuration }} ago</div>
+            <div class="t-small c-silver-text"><v-icon class="t-small">mdi-clock-time-nine-outline</v-icon> {{ listDuration }} ago</div>
             <div class="t-body-large d-flex" style="flex: 1; align-items: center;"><span class="t-h3">${{ rent }}</span> / month</div>
           </div>
         </div>
@@ -50,8 +50,8 @@
         icon
         @click.stop="saved = !saved"
       >
-        <v-icon v-if="!saved">mdi-bookmark-outline</v-icon>
-        <v-icon v-else>mdi-bookmark</v-icon>
+        <v-icon v-if="!saved" class="t-h2">mdi-bookmark-outline</v-icon>
+        <v-icon v-else class="t-h2">mdi-bookmark</v-icon>
       </v-btn>
     </div>
   </div>
@@ -59,7 +59,7 @@
 
 <style scoped>
 .v-image {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 ._container {

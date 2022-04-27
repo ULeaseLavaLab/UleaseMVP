@@ -46,7 +46,7 @@
           </v-btn>
         </div>
 
-        <div v-if="showFilters" class="mt-4 d-flex justify-center">
+        <div v-if="showFilters" class="mt-2 d-flex justify-center">
           <Filters />
         </div>
       </div>
@@ -76,7 +76,7 @@ export default {
 
   computed: {
     appBarHeight() {
-      return this.showFilters ? 150 : 90
+      return this.showFilters ? 135 : 90
     },
     showSearchBar() {
       return this.$route.name !== null && this.$route.name !== 'home'
@@ -126,6 +126,11 @@ export default {
     align-self: stretch;
   }
 
+  .thick-btn {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+  }
+
   /* Vuetify overrides */
   .v-btn {
     letter-spacing: unset;
@@ -144,48 +149,63 @@ export default {
     font-family: 'Poppins', sans-serif;
     font-size: 48px !important;
     font-weight: 700 !important;
+    line-height: 52px !important;
   }
 
   .t-h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 32px !important;
     font-weight: 600 !important;
+    line-height: 40px !important;
   }
 
   .t-h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 26px !important;
     font-weight: 500 !important;
+    line-height: 32px !important;
   }
 
-  .t-h4 {
+  .t-h4-inter {
     font-family: 'Inter', sans-serif;
     font-size: 22px !important;
     font-weight: 400 !important;
+    line-height: normal !important;
+  }
+
+  .t-h4-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
   }
 
   .t-body {
     font-family: 'Inter', sans-serif;
     font-size: 16px !important;
     font-weight: 400 !important;
+    line-height: normal !important;
   }
 
   .t-small {
     font-family: 'Inter', sans-serif;
     font-size: 14px !important;
     font-weight: 400 !important;
+    line-height: normal !important;
   }
 
   .t-pre-title {
     font-family: 'Inter', sans-serif;
     font-size: 12px !important;
     font-weight: 700 !important;
+    line-height: normal !important;
   }
 
   .t-button-text {
     font-family: 'Poppins', sans-serif;
     font-size: 16px !important;
     font-weight: 400 !important;
+    line-height: normal !important;
   }
 
   .t-link {
@@ -193,30 +213,35 @@ export default {
     font-size: 16px !important;
     font-weight: 500 !important;
     text-decoration: underline;
+    line-height: normal !important;
   }
 
   .t-tabs {
     font-family: 'Poppins', sans-serif;
     font-size: 14px !important;
     font-weight: 500 !important;
+    line-height: normal !important;
   }
 
   .t-bolded-button-text {
     font-family: 'Poppins', sans-serif;
     font-size: 16px !important;
     font-weight: 500 !important;
+    line-height: normal !important;
   }
 
   .t-body-large {
     font-family: 'Poppins', sans-serif;
     font-size: 18px !important;
     font-weight: 400 !important;
+    line-height: 20px !important;
   }
 
   .t-body-large2 {
     font-family: 'Inter', sans-serif;
     font-size: 18px !important;
     font-weight: 400 !important;
+    line-height: normal !important;
   }
 
   /* Colors */

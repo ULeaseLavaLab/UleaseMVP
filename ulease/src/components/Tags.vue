@@ -1,13 +1,14 @@
 <template>
-  <div class="d-flex" style="gap: 10px; align-items: center; flex-wrap: wrap">
+  <div class="d-flex" style="gap: 3px; align-items: center; flex-wrap: wrap">
     <v-btn 
       v-for="(tag, i) in tags" 
       :key="i"
       rounded
       outlined
       @click.stop
+      class="py-5"
     >
-      <span class="t-button-text">{{ tag }}</span>
+      <div class="t-button-text">{{ tag }}</div>
     </v-btn>
     <v-btn
       v-if="nextBtn"

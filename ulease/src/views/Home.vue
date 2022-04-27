@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex justify-center align-center pa-8" style="column-gap: 100px; height: 80%;">
     <div style="flex: 0 0 500px;">
-      <h1 class="t-h1 c-black-text">Secure your place near campus</h1>
-      <h2 class="t-h4 mb-8 c-silver-text"> Filter legitimate properties that fit your needs or sublease your place to college students. </h2>
+      <div class="t-h1 c-black-text mb-4">Secure your place near campus</div>
+      <div class="t-h4-inter mb-8 c-silver-text"> Filter legitimate properties that fit your needs or sublease your place to college students. </div>
       <div class="dropdowns mb-4">
         <v-row no-gutters>
           <v-col cols="12" class="mb-2">
@@ -56,7 +56,7 @@
       
       <div class="d-flex">
         <v-btn
-          class="t-button-text mr-1"
+          class="t-button-text mr-1 thick-btn"
           style="flex: 1;"
           color="var(--blue)"
           @click="search"
@@ -67,6 +67,7 @@
         </v-btn>
         
         <v-btn
+          class="thick-btn"
           outlined
           color="var(--gainsboro)"
         >
@@ -80,7 +81,7 @@
 
 
     <div style="width: 50%;">
-      <v-img src="../assets/home.png" />
+      <v-img src="../assets/home.png" class="rounded-lg" max-height="600px"/>
     </div>
   </div>
 </template>

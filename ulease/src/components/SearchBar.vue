@@ -1,10 +1,10 @@
 <template>
   <div class="d-flex">
-    <div class="d-flex _container pa-2" style="align-items: center;">
+    <div class="d-flex _container pa-1" style="align-items: center;">
       <template 
         v-for="(filter, i) in filters"
       >
-        <div v-if="i !== 0" :key="`divider-${i}`" class="_divider" />
+        <div v-if="i !== 0" :key="`divider-${i}`" class="_divider my-1" />
         <Selector 
           :key="i"
           v-if="filter.type === 'select'"
@@ -24,7 +24,7 @@
       
       
       <v-btn
-        color="primary"
+        color="var(--blue)"
         icon
         small
         @click="search"

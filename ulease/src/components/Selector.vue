@@ -9,7 +9,7 @@
         v-bind="attrs"
       >
         {{ value }}
-        <v-icon v-if="dropdownIcon">mdi-chevron-down</v-icon>  
+        <v-icon v-if="dropdownIcon" class="mr-n1">mdi-chevron-down</v-icon>  
       </v-btn>
     </template>
     <v-list>

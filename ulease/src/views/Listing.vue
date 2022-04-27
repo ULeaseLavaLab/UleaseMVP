@@ -1,6 +1,6 @@
 <template>
   <v-container style="max-width: 1200px;">
-    <div class="d-flex mb-4" style="height: 400px; gap: 10px;">
+    <div class="d-flex mb-8" style="height: 400px; gap: 10px;">
       <v-img :src="property.image" style="flex: 1;"/>
       <div class="d-flex" style="flex-direction: column; gap: 10px; max-width: 400px;">
         <v-img src="@/assets/listing/2.png" style="flex: 1;"/>
@@ -30,7 +30,7 @@
     </div>
     
     <div class="d-flex">
-      <div style="flex: 1;">
+      <div class="" style="flex: 1;">
         <div class="d-flex align-center mb-8">
           <div class="t-body-large c-silver-text mr-6">{{ property.address }}</div>
           <div class="t-small c-blue-text"><v-icon class="c-blue-text">mdi-account-supervisor</v-icon> 12 people are viewing this property</div>
@@ -45,7 +45,7 @@
           :numReviews="property.numReviews"
         />
 
-        <div class="t-h4 mb-2">Overview</div>
+        <div class="t-h4-poppins mb-4">Overview</div>
         <div class="t-body mb-8">{{ property.description }}</div>
 
         <table>
@@ -71,28 +71,28 @@
 
         <v-divider class="my-8" />
 
-        <div class="t-h4 mb-2">Property amenities</div>
+        <div class="t-h4-poppins mb-4">Property amenities</div>
         <Tags class="mb-4" :tags="property.amenities" />
         <v-btn
-          class="c-blue-text t-button-text"
+          class="c-blue-text t-button-text rounded-lg"
           outlined
         >Show all amenities (23)</v-btn>
 
         <v-divider class="my-8" />
 
-        <div class="t-h4 mb-2">Hoover Street in Los Angeles, CA</div>
+        <div class="t-h4-poppins mb-4">Hoover Street in Los Angeles, CA</div>
         <v-img src="@/assets/listing/map.png" width="800" />
 
         <v-divider class="my-8" />
 
-        <v-tabs v-model="tab">
+        <v-tabs v-model="tab" color="var(--blue)">
           <v-tabs-slider color="var(--blue)"></v-tabs-slider>
 
           <v-tab>
-            <span class="t-h4">Reviews for this property</span>
+            <span class="t-h4-poppins">Reviews for this property</span>
           </v-tab>
           <v-tab>
-            <span class="t-h4">Questions & Answers</span>
+            <span class="t-h4-poppins">Questions & Answers</span>
           </v-tab>
         </v-tabs>
 
@@ -111,19 +111,20 @@
           </v-tab-item>
         </v-tabs-items>
       </div>
+
       <div>
         <v-card rounded class="pa-4 ml-6 mt-6 rounded-lg" style="position: sticky; top: 114px; max-width: 350px;">
-          <div class="d-flex align-center mb-4">
+          <div class="d-flex align-center mb-8">
             <div class="t-h3 mr-1">${{ property.rent }}</div> <div class="t-body-large"> / month</div>
           </div>
 
-          <div class="t-h4 c-black-text">Interested in this property?</div>
+          <div class="t-h4-poppins c-black-text mb-2">Interested in this property?</div>
           <div class="t-body c-silver-text mb-8">Send a message to show interest and ask questions or view property availability</div>
           
-          <v-btn color="var(--blue)" class="mb-2 rounded-lg" dark block @click="message">
+          <v-btn color="var(--blue)" class="mb-2 rounded-lg thick-btn" dark block @click="message">
             <div class="t-button-text">Message lister</div>
           </v-btn>
-          <v-btn outlined block color="var(--gainsboro)" class="rounded-lg">
+          <v-btn outlined block color="var(--gainsboro)" class="rounded-lg thick-btn">
             <span class="t-button-text c-black-text">View property</span>
           </v-btn>
         </v-card>
