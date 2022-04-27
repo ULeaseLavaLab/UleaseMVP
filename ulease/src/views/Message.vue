@@ -32,151 +32,153 @@
                         dropdown-icon
                     />
                 </div>
-                <div> 
-                    <div class = "message-box-first">
-                        <div class="img-space"> 
-                            <img src="../assets/gateway.png" width = "62" height = "62" alt="">
+                <div class="" style="">
+                    <div style="overflow-y: scroll; overflow-x: hidden; height: calc(100vh - 90px - 64px - 40px);"> 
+                        <div class = "message-box-first">
+                            <div class="img-space"> 
+                                <img src="../assets/gateway.png" width = "62" height = "62" alt="">
+                            </div>
+                            <div class = "name-tag-f"> 
+                            University Gateway 
+                            </div>
+                            <a> Okay, thank you! I will let you know any further questions about the contract. </a>
+                            <div class = "first-button"> 
+                                Just now
+                                <v-btn
+                                color="#ebebee"
+                                icon
+                                >
+                                <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </div>
                         </div>
-                        <div class = "name-tag-f"> 
-                        University Gateway 
+                        <div class = "message-box">
+                            <div class="img-space"> 
+                                <img src="../assets/headshot2.jpg" width = "62" height = "62" alt="">
+                            </div>
+                            <div class = "name-tag"> 
+                            Winston Tilton 
+                            </div>
+                            <h5> Hi, thanks for your interest! Yes, my place is still available to sublease if you are still looking at options! </h5>
+                            <div class = "expand-button"> 
+                                5:53 PM
+                                <v-btn
+                                color="#717171"
+                                icon
+                                >
+                                <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </div>
                         </div>
-                        <a> Okay, thank you! I will let you know any further questions about the contract. </a>
-                        <div class = "first-button"> 
-                            Just now
-                            <v-btn
-                            color="#ebebee"
-                            icon
-                            >
-                            <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
+                        <div class = "message-box">
+                            <div class="img-space"> 
+                                <img src="../assets/headshot3.png" width = "62" height = "62" alt="">
+                            </div>
+                            <div class="unread"> </div>
+                            <div class = "name-tag"> 
+                            Sally Jade 
+                            </div>
+                            <h5> Thanks for reaching out! Sorry, I already found someone to sublease my place but I can connect you with my friend who's still looking for someone to room with their r... </h5>
+                            <div class = "expand-button"> 
+                                4:24 PM
+                                <v-btn
+                                color="#717171"
+                                icon
+                                >
+                                <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </div>
                         </div>
-                    </div>
-                    <div class = "message-box">
-                        <div class="img-space"> 
-                            <img src="../assets/headshot2.jpg" width = "62" height = "62" alt="">
+                        <div class = "message-box">
+                            <div class="img-space"> 
+                                <img src="../assets/headshot4.png" width = "62" height = "62" alt="">
+                            </div>
+                            <div class="unread"> </div>
+                            <div class = "name-tag"> 
+                            Frank Singh 
+                            </div>
+                            <h5> Yes, it's still available and it's a great place to stay for the summer, the location is right on Ellendale street so it's close to campus. Let me know if you have any ques... </h5>
+                            <div class = "expand-button"> 
+                                1:08 PM
+                                <v-btn
+                                color="#717171"
+                                icon
+                                >
+                                <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </div>
                         </div>
-                        <div class = "name-tag"> 
-                        Winston Tilton 
+                        <div class = "message-box">
+                            <div class="img-space"> 
+                                <img src="../assets/headshot5.png" width = "62" height = "62" alt="">
+                            </div>
+                            <div class = "name-tag"> 
+                            Alice Rion
+                            </div>
+                            <h5> Hey! I saw that you were subleasing your place for summer 2022 and I was interested in your listing. Are you still looking for someone to sublease and will it b... </h5>
+                            <div class = "expand-button"> 
+                                Yesterday
+                                <v-btn
+                                color="#717171"
+                                icon
+                                >
+                                <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </div>
                         </div>
-                        <h5> Hi, thanks for your interest! Yes, my place is still available to sublease if you are still looking at options! </h5>
-                        <div class = "expand-button"> 
-                            5:53 PM
-                            <v-btn
-                            color="#717171"
-                            icon
-                            >
-                            <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
+                        <div class = "message-box">
+                            <div class="img-space"> 
+                                <img src="../assets/headshot6.png" width = "62" height = "62" alt="">
+                            </div>
+                            <div class = "name-tag"> 
+                            Kelly Lopez
+                            </div>
+                            <h5> Is your place still available for a Summer 2022 sublease? </h5>
+                            <div class = "expand-button"> 
+                                Yesterday
+                                <v-btn
+                                color="#717171"
+                                icon
+                                >
+                                <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </div>
                         </div>
-                    </div>
-                    <div class = "message-box">
-                        <div class="img-space"> 
-                            <img src="../assets/headshot3.png" width = "62" height = "62" alt="">
+                        <div class = "message-box">
+                            <div class="img-space"> 
+                                <img src="../assets/headshot7.png" width = "62" height = "62" alt="">
+                            </div>
+                            <div class = "name-tag"> 
+                            Sam Trion 
+                            </div>
+                            <h5> Is your place still available for a Summer 2022 sublease? </h5>
+                            <div class = "expand-button"> 
+                                Wednesday
+                                <v-btn
+                                color="#717171"
+                                icon
+                                >
+                                <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </div>
                         </div>
-                        <div class="unread"> </div>
-                        <div class = "name-tag"> 
-                        Sally Jade 
-                        </div>
-                        <h5> Thanks for reaching out! Sorry, I already found someone to sublease my place but I can connect you with my friend who's still looking for someone to room with their r... </h5>
-                        <div class = "expand-button"> 
-                            4:24 PM
-                            <v-btn
-                            color="#717171"
-                            icon
-                            >
-                            <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
-                        </div>
-                    </div>
-                    <div class = "message-box">
-                        <div class="img-space"> 
-                            <img src="../assets/headshot4.png" width = "62" height = "62" alt="">
-                        </div>
-                        <div class="unread"> </div>
-                        <div class = "name-tag"> 
-                        Frank Singh 
-                        </div>
-                        <h5> Yes, it's still available and it's a great place to stay for the summer, the location is right on Ellendale street so it's close to campus. Let me know if you have any ques... </h5>
-                        <div class = "expand-button"> 
-                            1:08 PM
-                            <v-btn
-                            color="#717171"
-                            icon
-                            >
-                            <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
-                        </div>
-                    </div>
-                    <div class = "message-box">
-                        <div class="img-space"> 
-                            <img src="../assets/headshot5.png" width = "62" height = "62" alt="">
-                        </div>
-                        <div class = "name-tag"> 
-                        Alice Rion
-                        </div>
-                        <h5> Hey! I saw that you were subleasing your place for summer 2022 and I was interested in your listing. Are you still looking for someone to sublease and will it b... </h5>
-                        <div class = "expand-button"> 
-                            Yesterday
-                            <v-btn
-                            color="#717171"
-                            icon
-                            >
-                            <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
-                        </div>
-                    </div>
-                    <div class = "message-box">
-                        <div class="img-space"> 
-                            <img src="../assets/headshot6.png" width = "62" height = "62" alt="">
-                        </div>
-                        <div class = "name-tag"> 
-                        Kelly Lopez
-                        </div>
-                        <h5> Is your place still available for a Summer 2022 sublease? </h5>
-                        <div class = "expand-button"> 
-                            Yesterday
-                            <v-btn
-                            color="#717171"
-                            icon
-                            >
-                            <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
-                        </div>
-                    </div>
-                    <div class = "message-box">
-                        <div class="img-space"> 
-                            <img src="../assets/headshot7.png" width = "62" height = "62" alt="">
-                        </div>
-                        <div class = "name-tag"> 
-                        Sam Trion 
-                        </div>
-                        <h5> Is your place still available for a Summer 2022 sublease? </h5>
-                        <div class = "expand-button"> 
-                            Wednesday
-                            <v-btn
-                            color="#717171"
-                            icon
-                            >
-                            <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
-                        </div>
-                    </div>
-                    <div class = "message-box">
-                        <div class="img-space"> 
-                            <img src="../assets/headshot8.png" width = "62" height = "62" alt="">
-                        </div>
-                        <div class = "name-tag"> 
-                        AJ Walker 
-                        </div>
-                        <h5> Is your place still available for a Summer 2022 sublease? </h5>
-                        <div class = "expand-button"> 
-                            Wednesday
-                            <v-btn
-                            color="#717171"
-                            icon
-                            >
-                            <v-icon>mdi-chevron-right</v-icon>
-                            </v-btn>
+                        <div class = "message-box">
+                            <div class="img-space"> 
+                                <img src="../assets/headshot8.png" width = "62" height = "62" alt="">
+                            </div>
+                            <div class = "name-tag"> 
+                            AJ Walker 
+                            </div>
+                            <h5> Is your place still available for a Summer 2022 sublease? </h5>
+                            <div class = "expand-button"> 
+                                Wednesday
+                                <v-btn
+                                color="#717171"
+                                icon
+                                >
+                                <v-icon>mdi-chevron-right</v-icon>
+                                </v-btn>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -194,7 +196,44 @@
                     </div>
                 </div>
 
-                <div class="flex">
+                <div class="d-flex flex-column flex">
+                    <v-spacer />
+                    <div class="pa-4" style="width: 682px;">
+                        <div class="d-flex">
+                            <v-spacer />
+                            <div class="msg-bubble t-body rounded-xl c-blue white--text px-4 py-2 mb-1">
+                                I am interested in the 2 bed 2 bath unit for an annual lease starting Fall 2022!
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="msg-bubble t-body rounded-xl c-platinum px-4 py-2 mb-1">
+                                I am interested in the 2 bed 2 bath unit for an annual lease starting Fall 2022!
+                            </div>
+                            <v-spacer />
+                        </div>
+                        <div class="d-flex">
+                            <div class="msg-bubble t-body rounded-xl c-platinum px-4 py-2 mb-1">
+                                <div class="d-flex">
+                                    <div>
+                                        <div class="docusign">DocuSign</div>
+                                        <div class="t-small c-silver-text"> app.docusign.com </div>
+                                    </div>
+                                    <v-spacer />
+                                    <img src = "../assets/docusign.png" width = "42" height="42" style="border-radius: unset;" class="rounded-lg">
+                                </div>
+                            </div>
+                            <v-spacer />
+                        </div>
+                        <div class="d-flex">
+                            <v-spacer />
+                            <div class="msg-bubble t-body rounded-xl c-blue white--text px-4 py-2 mb-1">
+                                Okay, thank you! I will let you know any further questions about the contract.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="flex">
                     <div class="box">
                         <div class="left-center">
                             <div class="dialog-1" style="text-align: left;">
@@ -219,7 +258,7 @@
                         </div>
                         </div>
                     </div>  
-                </div>
+                </div>-->
 
                 <div class="messaging-side pa-4">
                     <v-text-field
@@ -244,7 +283,7 @@
                             raised
                             dark
                             color="var(--blue)"
-                            class="send"
+                            class="t-button-text"
                         >
                         Send 
                         </v-btn>
@@ -258,6 +297,14 @@
 </template>
 
 <style scoped>
+    .msg-bubble {
+        width: 270px;
+    }
+    .docusign {
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+    }
     .top-section {
         height: 64px;
     }

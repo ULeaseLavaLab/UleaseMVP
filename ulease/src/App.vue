@@ -40,7 +40,7 @@
             text
             outlined
             rounded
-            class="t-tabs c-black-text"
+            class="t-tabs c-black-text mr-2"
           >
             <v-icon class="mr-2">mdi-account</v-icon> {{ loggedIn ? 'Profile' : 'Log in'}}
           </v-btn>

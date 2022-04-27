@@ -56,13 +56,13 @@
       
       <div class="d-flex">
         <v-btn
-          class="t-button-text mr-1 thick-btn"
-          style="flex: 1;"
+          class="t-button-text mr-1"
+          style="flex: 1; align-self: stretch; height: unset;"
           color="var(--blue)"
           @click="search"
           dark
         >
-          <v-icon class="mr-1">mdi-magnify</v-icon>
+          <v-icon class="t-button-text mr-1">mdi-magnify</v-icon>
           Search
         </v-btn>
         
@@ -72,7 +72,7 @@
           color="var(--gainsboro)"
         >
           <span class="c-black-text t-button-text">
-            <v-icon>mdi-tune-variant</v-icon>
+            <v-icon class="t-button-text">mdi-tune-variant</v-icon>
             Filters
           </span>
         </v-btn>
