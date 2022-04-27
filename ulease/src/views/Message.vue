@@ -41,7 +41,7 @@
                             <div class = "name-tag-f"> 
                             University Gateway 
                             </div>
-                            <a> Okay, thank you! I will let you know any further questions about the contract. </a>
+                            <a class="white--text"> Okay, thank you! I will let you know any further questions about the contract. </a>
                             <div class = "first-button"> 
                                 Just now
                                 <v-btn
