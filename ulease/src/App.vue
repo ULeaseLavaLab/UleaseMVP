@@ -22,7 +22,6 @@
           <v-spacer />
 
           <v-btn 
-            @click=""
             text
             rounded
             class="t-tabs c-black-text"
@@ -30,7 +29,6 @@
             <v-icon class="mr-2">mdi-plus-circle-outline</v-icon> List your place
           </v-btn>
           <v-btn 
-            @click=""
             v-if="loggedIn"
             text
             rounded
@@ -39,7 +37,6 @@
             <v-icon class="mr-2">mdi-email-outline</v-icon> Messages
           </v-btn>
           <v-btn 
-            @click=""
             text
             outlined
             rounded
@@ -134,8 +131,8 @@ export default {
     letter-spacing: unset;
     text-indent: unset;
     text-transform: unset;
-    padding-top: 22px !important;
-    padding-bottom: 22px !important;
+    /*padding-top: 22px !important;
+    padding-bottom: 22px !important;*/
   }
 
   .theme--light.v-application {
