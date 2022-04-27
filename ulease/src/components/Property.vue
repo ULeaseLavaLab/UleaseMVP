@@ -15,8 +15,8 @@
       <div class="d-flex mr-2" style="flex: 1; flex-direction:column; justify-content: space-between">
         <div class="d-flex" style="flex: 1; justify-content: space-between">
           <div>
-            <div class="t-body-large">
-              {{ title }} 
+            <div class="t-body-large mb-1">
+              <span class="mr-3">{{ title }}</span> 
               <v-chip v-if="sponsored" small class="t-pre-title c-blue white--text" label><v-icon small class="ml-n1 white--text">mdi-lightning-bolt</v-icon>BOOSTED</v-chip>
               <v-chip v-else small class="t-pre-title" outlined label>STUDENT LISTED</v-chip>
             </div>

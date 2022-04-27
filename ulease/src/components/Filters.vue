@@ -3,13 +3,13 @@
     <Selector 
       v-for="filter, i in filters"
       :key="i"
-      btn-class="mr-2"
+      btn-class="mr-2 py-5"
       :value="filter.value"
       :options="filter.options"
       outlined
       dropdown-icon
     />
-    <v-btn class="rounded-lg" color="var(--gainsboro)" outlined>
+    <v-btn class="rounded-lg py-5" color="var(--gainsboro)" outlined>
       <span class="t-button-text c-blue-text">Clear</span>
     </v-btn>
   </div>

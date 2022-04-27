@@ -4,14 +4,14 @@
             <div class="d-flex flex-column">
                 <div class="top-section d-flex align-center">
                     <v-btn
-                        class="c-blue t-button-text rounded-lg mr-1"
+                        class="c-blue t-button-text rounded-lg mr-1 py-5"
                         normal
                         outlined
                         dark
                         color="white"
                     >All messages </v-btn>
                     <v-btn
-                        class="t-button-text rounded-lg"
+                        class="t-button-text rounded-lg py-5"
                         normal
                         outlined
                         color="var(--gainsboro)"
@@ -20,13 +20,13 @@
                     <v-spacer />
 
                     <Selector 
-                        btn-class="mr-1"
+                        btn-class="mr-1 py-5"
                         value="Fall 2022"
                         outlined
                         dropdown-icon
                     />
                     <Selector 
-                        btn-class="mr-2"
+                        btn-class="mr-2 py-5"
                         value="Lease"
                         outlined
                         dropdown-icon
@@ -189,7 +189,7 @@
                         <div class="d-flex">
                             <div class = "ts"> Housing Company  </div>
                             <v-spacer />
-                            <div class = "tr"> Usually Responds in a Few Hours  </div>
+                            <div class = "tr"> Usually responds in a few hours </div>
                         </div>
                     </div>
                 </div>
@@ -197,22 +197,22 @@
                 <div class="flex">
                     <div class="box">
                         <div class="left-center">
-                            <div class="dialog-1">
+                            <div class="dialog-1" style="text-align: left;">
                                 <div class="left-point"></div>
                                 Hello, thank you for your interest! Please take a look at the leasing document below.
                             </div>
-                            <div class="dialog-3">
+                            <div class="dialog-3" >
                                 <div class="left-point"></div>
                                 <div class="bolded">DocuSign</div>
                                 <div class = "undertext"> app.docusign.com </div>
                                 <img src = "../assets/docusign.png" width = "42" height="42" alt = "gateway" class="docimg">
                             </div>
                         <div class="right-center">
-                            <div class="dialog-2">
+                            <div class="dialog-2" style="text-align: left;">
                                 <div class="right-point"></div>
                                 I am interested in the 2 bed 2 bath unit for an annual lease starting Fall 2022!
                             </div>
-                            <div class="dialog-4">
+                            <div class="dialog-4" style="text-align: left;">
                                 <div class="right-point"></div>
                                 Okay, thank you! I will let you know any further questions about the contract.
                             </div>
@@ -447,18 +447,6 @@
     
     }
 
-    .left-point{
-	width: 0;
-	height: 0;
-	border-left: 20px solid transparent;
-	border-right: 2px solid transparent;
-	border-top: 40px solid #EBEBEB;
-	position: relative;
-	top: 45%;
-	left: -10%;
-	transform: rotate(60deg);
-    float: left;
-    }
 
     .dialog-2{
   	height: 20%;
@@ -492,18 +480,7 @@
     text-align: left;
     }
 
-    .right-point{
-	width: 0;
-	height: 0;
-	border-left: 2px solid transparent;
-	border-right: 20px solid transparent;
-	border-top: 40px solid #202ADF;
-	position: relative;
-	top: 45%;
-	right: -10%;
-	transform: rotate(-60deg);
-    float: right;
-    }
+    
     .bolded {
         font-weight: bold;
         font-size: 20px;
